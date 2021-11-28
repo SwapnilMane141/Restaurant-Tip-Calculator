@@ -1,0 +1,259 @@
+.split-text{
+    // display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .4rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+
+    
+}
+
+.box{
+    padding:3rem 3.5rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.2);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2rem;
+    font-weight: 700;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    width: 70%;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+    align-content: center;
+    grid-gap:1rem;
+
+    @media only screen and (max-width:$bp-small){
+        margin-top: 5rem;
+    }
+
+
+    &__left{
+        // background-color: orangered;
+
+        .bill-box{
+            margin-bottom: 1rem;
+
+
+
+            &__text{
+
+
+            }
+
+            &__input{
+                border: none;
+                background-color: $color-light-cyan;
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $color-grey-cyan;
+                padding: 1rem 1rem;
+                width:90%;
+                margin:1rem 0;
+                border-radius: .3rem;
+                background-image: url('../Images/icon-dollar.svg');
+                background-position: .8rem 50%;
+                background-repeat: no-repeat;
+                padding-left: 4rem;
+                padding-right: 1rem;
+                font-family: 'Space Mono';
+
+                &:focus{
+                    outline: none;
+                }
+
+                &::placeholder{
+                    align-items: center;
+                }
+
+                @media only screen and (max-width:$bp-small){
+                    width: 100%;
+                }
+
+                @media only screen and (max-width:$bp-smallest){
+                    width: 90%;
+                }
+            }
+        }
+
+        .tip-selection{
+            margin-bottom: 3rem;
+            display: block;
+
+            &__text{
+                margin-bottom: .6rem;
+            }
+
+            &__buttons{
+                display: grid;
+                width: 90%;
+                grid-template-rows: repeat(2,1fr);
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 1rem;
+                
+                @media only screen and (max-width:$bp-small){
+                    width: 100%;
+                }
+
+                @media only screen and (max-width:$bp-smallest){
+                    width: 90%;
+                }
+                
+                .tip-button{
+                    border: none;
+                    text-decoration: none;
+                    padding:1rem 1.5rem;
+                    background-color: $color-secondary;
+                    color:$color-white;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                    font-family: 'Space Mono';
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+
+                .tip-input{
+                    border: none;
+                    width:100%;
+                    color: $color-grey-cyan;
+                    font-size: 2rem;
+                    background-color: $color-light-cyan;
+                    font-weight: 700;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:focus{
+                        outline: none;
+                    }
+    
+                    &::placeholder{
+                        align-items: center;
+                    }
+
+                    .active{
+                        border:1px solid $color-primary;
+                    }
+                }
+
+                .active{
+                    background-color:$color-primary;;
+                }
+
+            }
+
+
+        }
+
+        .people-count{
+
+
+            &__text{
+
+            }
+
+            &__input{
+
+                border: none;
+                background-color: $color-light-cyan;
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $color-grey-cyan;
+                padding: 1rem 1rem;
+                width:90%;
+                margin:1rem 0;
+                border-radius: .3rem;
+                background-image: url('../Images/icon-person.svg');
+                background-position: .8rem 50%;
+                background-repeat: no-repeat;
+                padding-left: 4rem;
+                padding-right: 1rem;
+                font-family: 'Space Mono';
+
+                @media only screen and (max-width:$bp-small){
+                    width: 100%;
+                }
+
+                @media only screen and (max-width:$bp-smallest){
+                    width: 90%;
+                }
+        
+                &:focus{
+                    outline: none;
+                }
+
+                &::placeholder{
+                    align-items: center;
+                    
+                }
+            }
+
+        }
+    }
+
+
+    &__right{
+        background-color: $color-secondary;
+        color: $color-white;
+        padding:3rem 2rem;
+        border-radius: 1rem;
+        position: relative;
+        // width: 30rem;
+        // height: 30rem;
+
+        @media only screen and (max-width:$bp-small){
+            height: 30rem;
+        }
+
+        @media only screen and (max-width:$bp-smallest){
+            width: 90%;
+        }
+
+        .tip-details{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 1.5rem 0 2.5rem 0;
+
+            &__text{
+
+
+                .person-text{
+                    color:$color-grey-cyan;
+                }
+            }
+
+            &__number{
+                font-size: 3.5rem;
+                color:$color-primary;
+
+                @media only screen and (max-width:$bp-smallest){
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .reset-button{
+            display: block;
+            position: absolute;
+            bottom:3rem;
+            width: 90%;
+            border:none;
+            text-decoration: none;
+            padding:1.5rem 1.5rem;
+            background-color: $color-primary;
+            color:$color-secondary;
+            border-radius: 1rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            @media only screen and (max-width:$bp-smallest){
+                width: 80%;
+            }
+        }
+    }
+}

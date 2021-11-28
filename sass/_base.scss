@@ -1,0 +1,48 @@
+$color-primary:hsl(172, 67%, 45%);
+$color-secondary:hsl(183, 100%, 15%);
+
+$color-grey-cyan:hsl(186, 14%, 43%);
+$color-grey-cyan-2:hsl(184, 14%, 56%);
+
+$color-light-cyan:hsl(185, 41%, 84%);
+$color-light-cyan-2:hsl(189, 41%, 97%);
+
+$color-white: hsl(0, 0%, 100%);
+
+
+// Responsive Breakpoints
+$bp-largest: 62.5em; //1000px
+$bp-small: 55.62em; //890px
+$bp-smallest: 28.12em; //450px
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width:$bp-largest){
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width:$bp-smallest){
+        font-size: 45%;
+    }
+}
+
+body{
+    font-family: 'Space Mono',sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: $color-light-cyan;
+    color: $color-grey-cyan;
+    overflow-x: hidden;
+}

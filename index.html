@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type='image/icon' href="Images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src='js/script.js'></script>
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <header class='header'>
+        <div class="split-text">
+            Spli<br>tter
+        </div>
+        <div class="box">
+            <div class="box__left">
+                <div class="bill-box">
+                    <label class='bill-box__text' for="bill">Bill</label><br>
+                    <input dir='rtl' placeholder='0' class='bill-box__input' type="text" id='bill' name='bill'><br>
+                </div>
+                <div class="tip-selection">
+                    <div class="tip-selection__text">Select Tip %</div>
+                    <div class="tip-selection__buttons">
+                        <button class='tip-button'>5%</button>
+                        <button class='tip-button'>10%</button>
+                        <button class='tip-button'>15%</button>
+                        <button class='tip-button'>25%</button>
+                        <button class='tip-button'>50%</button>
+                        <input dir='rtl' placeholder="Custom" type='text' id='custom-tip' name='custom-tip' class='tip-input'>
+                    </div>
+                </div>
+                <div class="people-count">
+                    <label class='people-count__text' for="peopleNumber">Number of People</label><br>
+                    <input dir='rtl' placeholder="0" class='people-count__input' type="text" id='peopleNumber' name='peopleNumber'>
+                </div>
+            </div>
+            <div class="box__right">
+                <div class="tip-details">
+                    <div class="tip-details__text">
+                        Tip Amount<br>
+                        <span class="person-text">/ person</span>
+                    </div>  
+                    <div class="tip-details__number tip-amount">
+                        $0.00
+                    </div>
+                </div>
+                <div class="tip-details">
+                    <div class="tip-details__text">
+                        Total<br>
+                        <span class="person-text">/ person</span>
+                    </div>  
+                    <div class="tip-details__number total-amount">
+                        $0.00
+                    </div>
+                </div>
+                <button class="reset-button">Reset</button>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
